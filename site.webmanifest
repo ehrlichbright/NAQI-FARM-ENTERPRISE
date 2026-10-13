@@ -1,0 +1,10 @@
+{
+  "name": "NAQI FARM ENTERPRISE",
+  "short_name": "NAQI Farm",
+  "description": "Kings (Olein) vegetable oil sold by the litre into your own container, plus frozen fish and chicken by the carton. Lagos, Nigeria.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fbfaf6",
+  "theme_color": "#123826",
+  "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}
