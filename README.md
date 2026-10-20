@@ -11,7 +11,7 @@ A fast, mobile-first static website (plain HTML/CSS/JS, no frameworks). Works on
 | `about.html` | Story, CAC number, founding date, team |
 | `blog/` | Blog: 3 starter guides (oil by the litre, what Olein/Kings oil is, storing frozen fish & chicken) |
 | `contact.html` | Order form (opens WhatsApp with the order pre-written), phone, map |
-| `404.html`, `robots.txt`, `sitemap.xml`, `site.webmanifest`, `favicon.svg` | SEO and housekeeping |
+| `404.html`, `robots.txt`, `sitemap.xml`, `site.webmanifest`, `favicon-32.png`, `apple-touch-icon.png` | SEO and housekeeping |
 
 Every page has a WhatsApp button, click-to-call, a mobile sticky Call/WhatsApp bar, SEO titles and descriptions,
 Open Graph share image, and Google structured data (LocalBusiness, FAQ, breadcrumbs).
@@ -43,6 +43,12 @@ The blog index, homepage teaser, sitemap and Google data update automatically.
 - Croaker, mackerel, titus: choosing frozen fish for your menu (only types you actually stock)
 - Frozen chicken cuts explained for caterers and party cooks
 - Delivery from Mushin to [area]: what to know (one post per area you deliver to often)
+
+## Logo files
+Your logo is used exactly as supplied (cropped and resized only, never redrawn or recoloured).
+- `assets/img/logo.png`: the full logo, used in the header, footer and Google business data
+- `assets/img/logo-original-crop.jpg`: the full logo at its original resolution
+- `favicon-32.png`, `apple-touch-icon.png`, `assets/img/icon-512.png`: the symbol cropped from your logo for browser tabs and phone icons
 
 ## Editing
 Edit the HTML files directly for small text changes. For changes to the header/footer on every page,

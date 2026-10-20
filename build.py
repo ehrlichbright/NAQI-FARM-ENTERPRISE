@@ -23,8 +23,8 @@ def wa(msg):
     return f"https://wa.me/{WA}?text={quote(msg)}"
 
 
-WA_GENERAL = wa("Hello NAQI FARM ENTERPRISE, I'd like today's price for vegetable oil / frozen foods.")
-WA_OIL = wa("Hello NAQI FARM ENTERPRISE, I'd like today's price per litre for Kings (Olein) vegetable oil. My container size is: ")
+WA_GENERAL = wa("Hello NAQI FARM ENTERPRISE, I'd like today's price for Original Olein oil / frozen foods.")
+WA_OIL = wa("Hello NAQI FARM ENTERPRISE, I'd like today's price per litre for Original Olein oil. My container size is: ")
 WA_FROZEN = wa("Hello NAQI FARM ENTERPRISE, which frozen fish and chicken cartons do you have today, and at what price?")
 WA_DELIVERY = wa("Hello NAQI FARM ENTERPRISE, I'd like to arrange delivery. My location is: ")
 
@@ -77,7 +77,7 @@ ART_CHICKEN = '''<svg viewBox="0 0 200 160" aria-hidden="true"><ellipse cx="100"
 
 NAV = [
     ("index.html", "Home"),
-    ("vegetable-oil.html", "Vegetable Oil"),
+    ("vegetable-oil.html", "Olein Oil"),
     ("frozen-foods.html", "Frozen Foods"),
     ("about.html", "About Us"),
     ("blog/index.html", "Blog"),
@@ -98,13 +98,12 @@ def header(active):
     )
     return f'''<a class="skip-link" href="#main">Skip to content</a>
 <div class="topbar"><div class="container">
-  <span>Kings (Olein) vegetable oil by the litre &middot; Frozen fish &amp; chicken by the carton</span>
+  <span>Original, unadulterated Olein oil by the litre &middot; Frozen fish &amp; chicken by the carton</span>
   <span><span class="hide-sm">Orders: </span><a href="tel:{PHONE_TEL}" data-track="topbar">{PHONE_DISPLAY}</a></span>
 </div></div>
 <header class="site-header"><div class="container">
   <a class="brand" href="index.html" aria-label="NAQI FARM ENTERPRISE home">
-    <img class="brand-mark" src="assets/img/logo-mark.svg" alt="" width="40" height="40">
-    <span class="brand-text"><span class="brand-name">NAQI FARM</span><span class="brand-sub">Enterprise</span></span>
+    <img class="brand-logo" src="assets/img/logo.png" alt="NAQI FARM ENTERPRISE: Pure, fresh and healthy" width="342" height="300">
   </a>
   <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">{I["menu"]}</button>
   <nav class="site-nav" id="site-nav" aria-label="Main">
@@ -118,9 +117,9 @@ def footer():
     return f'''<footer class="site-footer"><div class="container">
   <div class="footer-grid">
     <div>
-      <a class="brand" href="index.html"><img class="brand-mark" src="assets/img/logo-mark.svg" alt="" width="40" height="40"><span class="brand-text"><span class="brand-name">NAQI FARM</span><span class="brand-sub">Enterprise</span></span></a>
+      <a class="footer-logo" href="index.html"><img src="assets/img/logo.png" alt="NAQI FARM ENTERPRISE: Pure, fresh and healthy" width="342" height="300" loading="lazy"></a>
       <p class="tagline">Straight from the source. Measured in front of you.</p>
-      <p>Genuine vegetable oil without paying for the packaging, and frozen fish and chicken by the carton, for traders, kitchens and homes across Nigeria.</p>
+      <p>Original, unadulterated Olein oil without paying for the packaging, and frozen fish and chicken by the carton, for traders, kitchens and homes across Nigeria.</p>
       <div class="socials">
         <a href="{IG}" target="_blank" rel="noopener" aria-label="NAQI FARM ENTERPRISE on Instagram">{I["ig"]}</a>
         <a href="{FB}" target="_blank" rel="noopener" aria-label="NAQI FARM Enterprise on Facebook">{I["fb"]}</a>
@@ -128,7 +127,7 @@ def footer():
       </div>
     </div>
     <div><h4>Products</h4><ul>
-      <li><a href="vegetable-oil.html">Vegetable oil by the litre</a></li>
+      <li><a href="vegetable-oil.html">Original Olein oil by the litre</a></li>
       <li><a href="frozen-foods.html">Frozen fish (cartons)</a></li>
       <li><a href="frozen-foods.html">Frozen chicken (cartons)</a></li>
       <li><a href="contact.html#order">Request a price</a></li>
@@ -165,9 +164,9 @@ BUSINESS = {
     "@id": SITE + "/#business",
     "name": "NAQI FARM ENTERPRISE",
     "url": SITE + "/",
-    "logo": SITE + "/assets/img/logo-mark.svg",
+    "logo": SITE + "/assets/img/logo.png",
     "image": SITE + "/assets/img/og-image.jpg",
-    "description": "Lagos depot selling Olein refined vegetable oil (Kings oil) by the litre into customers' own containers through a metering system, plus frozen fish and chicken by the carton. Serving traders, restaurants, hotels, supermarkets and bulk buyers across Nigeria.",
+    "description": "Lagos depot selling original, unadulterated Olein refined vegetable oil (popularly known as Kings oil) by the litre into customers' own containers through a metering system, plus frozen fish and chicken by the carton. Serving traders, restaurants, hotels, supermarkets and bulk buyers across Nigeria.",
     "telephone": PHONE_TEL,
     "foundingDate": "2023-05-13",
     "slogan": "Straight from the source. Measured in front of you.",
@@ -218,11 +217,12 @@ def page(file, title, description, body, extra_schema=None, crumbs=None, nav_act
 <meta name="twitter:card" content="summary_large_image">
 <meta name="geo.region" content="NG-LA">
 <meta name="geo.placename" content="Mushin, Lagos">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css">
 <script type="application/ld+json">
 {schema}
@@ -312,7 +312,9 @@ def blog_teaser():
 # ===================================================================
 HOME_FAQ = [
     ("What kind of vegetable oil do you sell?",
-     "We sell Olein refined vegetable oil, popularly known as Kings oil. Our tanker brings it directly from the manufacturer to our depot in Lagos, with no middlemen in between."),
+     "We sell Original Olein oil: refined Olein vegetable oil, popularly known as Kings oil. Our tanker brings it directly from the manufacturer to our depot in Lagos, with no middlemen in between."),
+    ("Is your oil original and unadulterated?",
+     "Yes. Our oil comes by tanker straight from the manufacturer into our depot tank and is metered directly into your container. It is never mixed, diluted or repackaged along the way, so what you take home is the same oil that left the manufacturer."),
     ("Why is your oil cheaper than bottled oil?",
      "Because you are not paying for a bottle, a label or packaging markup. You bring your own drum, keg or container, we fill it through our metering system, and you pay only for the oil."),
     ("How do I know I'm getting the exact quantity?",
@@ -334,12 +336,13 @@ home = f'''
   <div class="container hero-grid">
     <div>
       <div class="hero-badges">
+        <span class="pill">{I["check"]} 100% original Olein</span>
+        <span class="pill">{I["check"]} Unadulterated</span>
         <span class="pill">{I["check"]} Direct from manufacturer</span>
         <span class="pill">{I["check"]} Metered in front of you</span>
-        <span class="pill">{I["check"]} CAC registered</span>
       </div>
-      <h1>Pay for the oil, <em>not the bottle.</em></h1>
-      <p class="lead">Genuine Kings (Olein) vegetable oil, filled into your own drum, keg or container through our meter, plus frozen fish and chicken by the carton. From our Lagos depot to traders, kitchens and homes across Nigeria.</p>
+      <h1>Original Olein oil.<br><em>Pay for the oil, not the bottle.</em></h1>
+      <p class="lead">Pure, unadulterated Olein oil straight from the manufacturer, filled into your own drum, keg or container through our meter. Plus frozen fish and chicken by the carton. From our Lagos depot to traders, kitchens and homes across Nigeria.</p>
       <div class="btn-row">
         <a class="btn btn-wa" href="{WA_GENERAL}" target="_blank" rel="noopener" data-track="hero">{I["wa"]} Get today's price</a>
         <a class="btn btn-light" href="#how-it-works">See how it works</a>
@@ -355,7 +358,7 @@ home = f'''
       <ul class="compare">
         <li><span>Bottle &amp; label</span><span class="no">You pay</span></li>
         <li><span>Packaging markup</span><span class="no">You pay</span></li>
-        <li><span>Oil, measured exactly</span><span class="yes">You pay only this</span></li>
+        <li><span>Original Olein oil, measured exactly</span><span class="yes">You pay only this</span></li>
       </ul>
     </div>
   </div>
@@ -363,10 +366,10 @@ home = f'''
 
 <section class="trust" aria-label="Why buyers trust us">
   <div class="container">
+    <div class="trust-item">{I["shield"]}<div><strong>Original &amp; unadulterated</strong><span>Never mixed or diluted</span></div></div>
     <div class="trust-item">{I["tanker"]}<div><strong>Tanker direct</strong><span>From manufacturer to depot</span></div></div>
     <div class="trust-item">{I["gauge"]}<div><strong>Metered fill</strong><span>See every litre</span></div></div>
     <div class="trust-item">{I["doc"]}<div><strong>CAC Reg. {CAC}</strong><span>Registered business</span></div></div>
-    <div class="trust-item">{I["calendar"]}<div><strong>Since May 2023</strong><span>Lagos-based</span></div></div>
   </div>
 </section>
 
@@ -375,7 +378,7 @@ home = f'''
     <div class="section-head center">
       <span class="eyebrow">How it works</span>
       <h2>Honest measurement in three steps</h2>
-      <p class="lead">No bottle, no label, no markup. Just good oil at a fair price.</p>
+      <p class="lead">No bottle, no label, no markup. Just original, unadulterated oil at a fair price.</p>
     </div>
     <div class="grid grid-3 steps">
       <div class="card step reveal"><span class="step-num">1</span><div class="icon-badge gold">{I["container"]}</div><h3>Bring your container</h3><p>Come with your own drum, keg or container, any size. Send us the size on WhatsApp first and we'll confirm today's price.</p></div>
@@ -397,8 +400,8 @@ home = f'''
         <div class="product-media oil">{ART_OIL}</div>
         <div class="product-body">
           <span class="tag">By the litre</span>
-          <h3>Olein refined vegetable oil (Kings oil)</h3>
-          <p>Brought by tanker straight from the manufacturer and metered into your own container. Any quantity, from a keg to a drum.</p>
+          <h3>Original Olein oil</h3>
+          <p>Pure, unadulterated Olein oil (popularly known as Kings oil), brought by tanker straight from the manufacturer and metered into your own container. Any quantity, from a keg to a drum.</p>
           <div class="btn-row"><a class="btn btn-outline btn-sm" href="vegetable-oil.html">Learn more</a><a class="btn btn-wa btn-sm" href="{WA_OIL}" target="_blank" rel="noopener" data-track="product-oil">{I["wa"]} Price</a></div>
         </div>
       </article>
@@ -428,11 +431,13 @@ home = f'''
   <div class="container split">
     <div class="reveal">
       <span class="eyebrow">Why NAQI</span>
-      <p class="big-quote">Across Nigeria, a lot of what we pay for at the market isn't the food. It's the <em>bottle, the label and the packaging.</em></p>
-      <p class="lead">NAQI FARM ENTERPRISE started in Lagos with a simple question: what if families, traders and kitchens could get the same genuine vegetable oil without paying for the packaging around it?</p>
+      <p class="big-quote">Original, unadulterated Olein oil. <em>Exactly as it left the manufacturer.</em></p>
+      <p class="lead">Oil that passes through many hands can be mixed, diluted or refilled before it reaches you. Ours doesn't. It comes by tanker straight from the manufacturer into our depot and is metered directly into your container, so your family, your customers and your kitchen get the original oil you paid for.</p>
+      <p class="lead">And because you bring your own container, you stop paying for the bottle, the label and the packaging too.</p>
       <a class="btn btn-gold" href="about.html">Read our story</a>
     </div>
     <ul class="check-list reveal">
+      <li><strong style="color:#fff">100% original Olein oil.</strong> Pure and unadulterated: never mixed, diluted or repackaged.</li>
       <li><strong style="color:#fff">No middlemen.</strong> Our tanker brings oil from the manufacturer straight to our depot.</li>
       <li><strong style="color:#fff">Nothing hidden.</strong> Every litre goes through the meter in front of you.</li>
       <li><strong style="color:#fff">No packaging markup.</strong> You bring the container; you pay for the oil.</li>
@@ -503,8 +508,8 @@ home = f'''
 
 page(
     "index.html",
-    "Vegetable Oil by the Litre & Frozen Foods in Lagos | NAQI FARM ENTERPRISE",
-    "Buy genuine Kings (Olein) vegetable oil by the litre in Lagos. Bring your own container, watch it metered, pay only for the oil. Frozen fish & chicken by the carton. Delivery across Nigeria.",
+    "Original Olein Oil by the Litre & Frozen Foods, Lagos | NAQI FARM",
+    "Buy original, unadulterated Olein oil (Kings oil) by the litre in Lagos, straight from the manufacturer. Bring your own container, watch it metered, pay only for the oil. Frozen fish & chicken too.",
     home,
     extra_schema=[faq_schema],
 )
@@ -514,7 +519,9 @@ page(
 # ===================================================================
 OIL_FAQ = [
     ("Is this the same as Kings oil?",
-     "Yes. We sell Olein refined vegetable oil, popularly known as Kings oil, brought by our tanker directly from the manufacturer to our depot."),
+     "Yes. We sell Original Olein oil, the refined Olein vegetable oil popularly known as Kings oil, brought by our tanker directly from the manufacturer to our depot."),
+    ("Is your Olein oil original and unadulterated?",
+     "Yes. It goes from the manufacturer's tanker into our depot tank and is metered straight into your container. It is never mixed, diluted or repackaged, so you get the original oil exactly as it left the manufacturer."),
     ("What containers can I bring?",
      "Bring your own clean drum, keg or container. We fill it through our metering system so you see the exact quantity."),
     ("Is there a minimum quantity?",
@@ -525,12 +532,12 @@ OIL_FAQ = [
      "Yes, on request. Delivery is charged separately from the oil. Share your location and quantity for a delivery quote."),
 ]
 oil_faq_html, oil_faq_schema = faq_block(OIL_FAQ)
-oil_crumbs = [("index.html", "Home"), ("vegetable-oil.html", "Vegetable Oil")]
+oil_crumbs = [("index.html", "Home"), ("vegetable-oil.html", "Original Olein Oil")]
 oil = f'''
 <section class="page-hero"><div class="container">
   {breadcrumb_html(oil_crumbs)}
-  <h1>Kings (Olein) vegetable oil, sold by the litre in Lagos</h1>
-  <p class="lead">Bring your own drum, keg or container. We fill it through our meter in front of you. You pay for the oil, not the bottle, the label or the packaging.</p>
+  <h1>Original Olein oil, pure and unadulterated, by the litre in Lagos</h1>
+  <p class="lead">Straight from the manufacturer, never mixed or diluted. Bring your own drum, keg or container, we fill it through our meter in front of you, and you pay for the oil, not the bottle, the label or the packaging.</p>
   <div class="btn-row" style="margin-top:24px">
     <a class="btn btn-wa" href="{WA_OIL}" target="_blank" rel="noopener" data-track="oil-hero">{I["wa"]} Get today's price per litre</a>
     <a class="btn btn-light" href="tel:{PHONE_TEL}" data-track="oil-hero">{I["phone"]} Call to order</a>
@@ -540,10 +547,12 @@ oil = f'''
 <section class="section"><div class="container split">
   <div class="reveal">
     <span class="eyebrow">The product</span>
-    <h2>Olein refined vegetable oil, straight from the source</h2>
+    <h2>Original Olein oil, exactly as it left the manufacturer</h2>
     <p>Our tanker brings Olein refined vegetable oil, popularly known as Kings oil, directly from the manufacturer to our depot in Mushin, Lagos. There are no middlemen in between, and no repackaging.</p>
-    <p>You get the same genuine oil you know. What you don't get is the cost of a bottle, a label and a retail markup on packaging.</p>
+    <p>That matters, because oil that passes through many hands can be mixed, diluted or refilled before it reaches you. Ours goes from the tanker to our tank to your container, so you get original, unadulterated oil for your family's meals and your customers' food.</p>
+    <p>What you don't get is the cost of a bottle, a label and a retail markup on packaging.</p>
     <ul class="check-list">
+      <li>100% original Olein oil, pure and unadulterated</li>
       <li>Delivered by tanker directly from the manufacturer</li>
       <li>Filled into your own container through a metering system</li>
       <li>You see the exact litres, and pay for exactly that</li>
@@ -565,7 +574,7 @@ oil = f'''
     </div>
     <div class="card reveal" style="border-color:var(--gold-500)">
       <h3>Buying from NAQI FARM</h3>
-      <ul class="check-list"><li>Oil, measured exactly in front of you</li></ul>
+      <ul class="check-list"><li>Original, unadulterated Olein oil</li><li>Measured exactly in front of you</li></ul>
       <p class="muted">Your container. Your quantity. Your fair price.</p>
       <a class="btn btn-wa btn-sm" href="{WA_OIL}" target="_blank" rel="noopener" data-track="oil-compare">{I["wa"]} Ask today's price</a>
     </div>
@@ -591,13 +600,13 @@ oil = f'''
 '''
 page(
     "vegetable-oil.html",
-    "Buy Kings Vegetable Oil by the Litre in Lagos | NAQI FARM ENTERPRISE",
+    "Original Olein Oil (Kings Oil) by the Litre, Lagos | NAQI FARM",
     "Olein refined vegetable oil (Kings oil) direct from the manufacturer, metered into your own drum or keg at our Mushin, Lagos depot. Pay for the oil, not the packaging.",
     oil,
     extra_schema=[oil_faq_schema, {
         "@type": "Product",
-        "name": "Olein refined vegetable oil (Kings oil), sold by the litre",
-        "description": "Olein refined vegetable oil delivered by tanker from the manufacturer and metered into the customer's own container.",
+        "name": "Original Olein oil (Kings oil), sold by the litre",
+        "description": "Original, unadulterated Olein refined vegetable oil delivered by tanker from the manufacturer and metered into the customer's own container.",
         "category": "Vegetable oil",
         "brand": {"@type": "Brand", "name": "Kings"},
         "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "NGN", "seller": {"@id": SITE + "/#business"}, "areaServed": "NG"},
@@ -730,6 +739,7 @@ about = f'''
     <div class="card" style="margin-top:14px">
       <h3>What we stand for</h3>
       <ul class="check-list mb-0">
+        <li>Original, unadulterated Olein oil, never mixed or diluted</li>
         <li>Straight from the source, no middlemen</li>
         <li>Measured in front of you</li>
         <li>Fair prices, with delivery always shown separately</li>
@@ -748,7 +758,7 @@ about = f'''
 page(
     "about.html",
     "About NAQI FARM ENTERPRISE | Our Story & Team, Lagos",
-    "NAQI FARM ENTERPRISE (CAC Reg. 9353141) started in Lagos in May 2023 to sell genuine vegetable oil without the packaging markup. Meet our story and our team.",
+    "NAQI FARM ENTERPRISE (CAC Reg. 9353141) started in Lagos in May 2023 to sell original, unadulterated Olein oil without the packaging markup. Meet our story and our team.",
     about,
     extra_schema=[{
         "@type": "AboutPage", "url": SITE + "/about.html", "name": "About NAQI FARM ENTERPRISE",
@@ -784,7 +794,7 @@ contact = f'''
           </select></div>
         <div class="field"><label for="f-product">Product</label>
           <select id="f-product" name="product" required>
-            <option>Vegetable oil (by the litre)</option><option>Frozen fish (cartons)</option><option>Frozen chicken (cartons)</option><option>Oil and frozen foods</option>
+            <option>Original Olein oil (by the litre)</option><option>Frozen fish (cartons)</option><option>Frozen chicken (cartons)</option><option>Oil and frozen foods</option>
           </select></div>
       </div>
       <div class="form-row">

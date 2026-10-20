@@ -1,10 +1,10 @@
 {
   "name": "NAQI FARM ENTERPRISE",
   "short_name": "NAQI Farm",
-  "description": "Kings (Olein) vegetable oil sold by the litre into your own container, plus frozen fish and chicken by the carton. Lagos, Nigeria.",
+  "description": "Original, unadulterated Olein oil sold by the litre into your own container, plus frozen fish and chicken by the carton. Lagos, Nigeria.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#fbfaf6",
-  "theme_color": "#123826",
-  "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+  "theme_color": "#0c522d",
+  "icons": [{ "src": "/assets/img/icon-512.png", "sizes": "512x512", "type": "image/png" }, { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }]
 }

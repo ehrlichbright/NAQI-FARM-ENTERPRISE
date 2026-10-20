@@ -38,7 +38,7 @@ POSTS = [
   <li><strong>Watch the meter.</strong> We fill it through our metering system in front of you, so you can see each litre as it goes in.</li>
   <li><strong>Pay for exactly that.</strong> The meter reading is what you pay for. Nothing more.</li>
 </ol>
-<p>Our oil is Olein refined vegetable oil, popularly known as Kings oil, and our tanker brings it straight from the manufacturer to our depot in Mushin. There is no middleman between the factory and our tank, which is the other half of why the price stays fair. If you want to know more about the oil itself, read <a href="blog/what-is-olein-oil-kings-oil.html">our plain guide to Olein oil</a>.</p>
+<p>Our oil is Original Olein oil, popularly known as Kings oil, and our tanker brings it straight from the manufacturer to our depot in Mushin. There is no middleman between the factory and our tank, so the oil is never mixed, diluted or repackaged, and that is also why the price stays fair. If you want to know more about the oil itself, read <a href="blog/what-is-olein-oil-kings-oil.html">our plain guide to Olein oil</a>.</p>
 
 <h2>Who benefits most from buying oil in bulk?</h2>
 <p>Anyone who uses a lot of oil, regularly, gets the most from buying by the litre:</p>
@@ -70,7 +70,7 @@ POSTS = [
             ("How do I know I'm getting the right quantity?",
              "Buy from a seller who fills through a meter you can watch. At NAQI FARM ENTERPRISE every fill goes through our metering system in front of you."),
             ("Where can I buy vegetable oil by the litre in Lagos?",
-             "NAQI FARM ENTERPRISE sells Olein refined vegetable oil (Kings oil) by the litre at 104 Ishaga Road, Idi-Araba, Mushin, Lagos. Message +234 906 843 1502 on WhatsApp for today's price."),
+             "NAQI FARM ENTERPRISE sells original, unadulterated Olein oil (Kings oil) by the litre at 104 Ishaga Road, Idi-Araba, Mushin, Lagos. Message +234 906 843 1502 on WhatsApp for today's price."),
         ],
     },
     {
@@ -105,7 +105,7 @@ POSTS = [
 </ul>
 
 <h2>How can you buy Olein oil at a fair price?</h2>
-<p>The fairest way is to buy it close to the source and pay only for the oil. At NAQI FARM ENTERPRISE our tanker brings Olein refined vegetable oil directly from the manufacturer to our depot in Mushin, Lagos. You bring your own keg or drum, we fill it through our meter in front of you, and you pay for exactly the litres you get.</p>
+<p>The safest and fairest way is to buy it close to the source, where it can't be mixed or diluted along the way, and pay only for the oil. At NAQI FARM ENTERPRISE our tanker brings Original Olein oil directly from the manufacturer to our depot in Mushin, Lagos. You bring your own keg or drum, we fill it through our meter in front of you, and you pay for exactly the litres you get.</p>
 <p>Read <a href="blog/buy-vegetable-oil-by-the-litre-lagos.html">how buying by the litre saves you money</a>, or go straight to <a href="vegetable-oil.html">our vegetable oil page</a> for today's price.</p>
 """,
         "faq": [
@@ -116,7 +116,7 @@ POSTS = [
             ("Why does my vegetable oil look cloudy?",
              "Palm-based oils like olein can turn slightly cloudy in cool or air-conditioned places. It normally clears again once the oil warms up."),
             ("Where can I buy Olein (Kings) oil in Lagos?",
-             "NAQI FARM ENTERPRISE sells Olein refined vegetable oil by the litre at 104 Ishaga Road, Idi-Araba, Mushin, Lagos, filled into your own container through a meter."),
+             "NAQI FARM ENTERPRISE sells original, unadulterated Olein oil by the litre at 104 Ishaga Road, Idi-Araba, Mushin, Lagos, filled into your own container through a meter."),
         ],
     },
     {
