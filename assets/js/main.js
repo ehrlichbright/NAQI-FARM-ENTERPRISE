@@ -80,6 +80,15 @@
     });
   }
 
+  /* ---------- Mobile call bar: hide while the homepage hero is visible ---------- */
+  var bar = document.querySelector(".mobile-bar");
+  var hero = document.querySelector(".hero-image");
+  if (bar && hero && "IntersectionObserver" in window) {
+    new IntersectionObserver(function (entries) {
+      bar.classList.toggle("is-hidden", entries[0].isIntersecting);
+    }, { threshold: 0.25 }).observe(hero);
+  }
+
   /* ---------- Footer year ---------- */
   var year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();

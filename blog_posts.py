@@ -66,7 +66,7 @@ POSTS = [
             ("Is buying vegetable oil by the litre cheaper than buying bottles?",
              "Usually, yes, because you are not paying for the bottle, the label or the markups added at each step of resale. You pay only for the oil measured into your own container."),
             ("What container should I bring to buy oil by the litre?",
-             "Bring a clean, dry keg, drum or container with a lid that closes well. Any size works, because you pay for the litres measured, not the size of the container."),
+             "Bring a clean, dry keg, drum or container with a lid that closes well. At NAQI FARM ENTERPRISE the minimum is 10 litres, and you pay only for the litres measured, not the size of the container."),
             ("How do I know I'm getting the right quantity?",
              "Buy from a seller who fills through a meter you can watch. At NAQI FARM ENTERPRISE every fill goes through our metering system in front of you."),
             ("Where can I buy vegetable oil by the litre in Lagos?",
