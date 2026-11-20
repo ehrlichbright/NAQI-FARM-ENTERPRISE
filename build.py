@@ -80,6 +80,7 @@ DEPOT = {
     "meter": ("assets/img/depot/litre-meter-and-pump.jpg", "The litre meter and pump that fill customers' containers"),
     "filling": ("assets/img/depot/filling-point.jpg", "The filling point, with the meter and delivery hose"),
     "meter_card": ("assets/img/depot/litre-meter-card.jpg", "Litre meter used to measure every fill at the depot"),
+    "keg": ("assets/img/depot/filling-a-keg.jpg", "A customer's yellow keg being filled through the litre meter"),
 }
 
 
@@ -338,7 +339,7 @@ HOME_FAQ = [
     ("Do you sell outside Lagos?",
      "Yes. We are based in Lagos and serve market traders, restaurants, hotels, supermarkets and bulk buyers across Nigeria."),
     ("What frozen foods do you have?",
-     "We sell frozen fish and chicken in a variety of types, packed in cartons and kept properly stored. Available types change, so message us on WhatsApp for what is in stock today."),
+     "We sell frozen Panla, Shawa and Titus fish, and frozen chicken, all packed in cartons and kept properly stored. Message us on WhatsApp for what is in stock today."),
     ("How do I get today's price?",
      f"Prices move with the market, so we quote daily. Send a WhatsApp message or call {PHONE_DISPLAY} with your container size or carton quantity."),
 ]
@@ -407,16 +408,16 @@ home = f'''
         </div>
       </article>
       <article class="card product-card reveal">
-        <div class="product-media fish">{ART_FISH}</div>
+        <div class="product-media fish"><img src="assets/img/products/panla-fish.jpg" alt="Frozen Panla fish laid out in a tray" width="960" height="600" loading="lazy"></div>
         <div class="product-body">
           <span class="tag">By the carton</span>
           <h3>Frozen fish</h3>
-          <p>A variety of fish types, packed in cartons and kept properly stored so it reaches your shop or kitchen the way it should.</p>
+          <p>Panla, Shawa and Titus, packed in cartons and kept properly stored so it reaches your shop or kitchen the way it should.</p>
           <div class="btn-row"><a class="btn btn-outline btn-sm" href="frozen-foods.html">Learn more</a><a class="btn btn-wa btn-sm" href="{WA_FROZEN}" target="_blank" rel="noopener" data-track="product-fish">{I["wa"]} Price</a></div>
         </div>
       </article>
       <article class="card product-card reveal">
-        <div class="product-media chicken">{ART_CHICKEN}</div>
+        <div class="product-media chicken"><img src="assets/img/products/chicken-carton.jpg" alt="A frozen carton of chicken in cold storage" width="960" height="600" loading="lazy"></div>
         <div class="product-body">
           <span class="tag">By the carton</span>
           <h3>Frozen chicken</h3>
@@ -568,7 +569,7 @@ oil = f'''
       <li>From {MIN_LITRES} litres upward, from a family keg to drums for business</li>
     </ul>
   </div>
-  <div class="card product-card reveal"><div class="product-media" style="aspect-ratio:3/4">{photo("tank_meter")}</div></div>
+  <div class="card product-card reveal"><div class="product-media" style="aspect-ratio:3/4">{photo("keg")}</div></div>
 </div></section>
 
 <section class="section section-alt"><div class="container">
@@ -639,7 +640,7 @@ page(
 # ===================================================================
 FROZEN_FAQ = [
     ("What types of fish and chicken do you have?",
-     "We stock a variety of fish and chicken types. Availability changes, so message us on WhatsApp for what is in stock today."),
+     "We stock Panla, Shawa and Titus fish, plus a range of chicken types. Availability changes, so message us on WhatsApp for what is in stock today."),
     ("Do you sell by the carton only?",
      "Our frozen foods are packed and sold in cartons. Tell us the quantity you need and we will confirm."),
     ("How are the frozen foods stored?",
@@ -653,7 +654,7 @@ frozen = f'''
 <section class="page-hero"><div class="container">
   {breadcrumb_html(frozen_crumbs)}
   <h1>Frozen fish and chicken by the carton in Lagos</h1>
-  <p class="lead">A variety of fish and chicken types, packed in cartons and kept properly stored, so it reaches your shop or kitchen the way it should.</p>
+  <p class="lead">Panla, Shawa and Titus fish, and chicken, packed in cartons and kept properly stored, so it reaches your shop or kitchen the way it should.</p>
   <div class="btn-row" style="margin-top:24px">
     <a class="btn btn-wa" href="{WA_FROZEN}" target="_blank" rel="noopener" data-track="frozen-hero">{I["wa"]} See what's in stock today</a>
     <a class="btn btn-light" href="tel:{PHONE_TEL}" data-track="frozen-hero">{I["phone"]} Call to order</a>
@@ -663,16 +664,16 @@ frozen = f'''
 <section class="section"><div class="container">
   <div class="grid grid-2">
     <article class="card product-card reveal">
-      <div class="product-media fish">{ART_FISH}</div>
+      <div class="product-media fish"><img src="assets/img/products/fish-carton.jpg" alt="Frozen fish packed in a lined carton" width="960" height="600" loading="lazy"></div>
       <div class="product-body">
         <span class="tag">Cartons</span>
-        <h3>Frozen fish</h3>
-        <p>Different fish types for homes, restaurants and retailers. Stock changes, so ask for today's list and prices.</p>
+        <h3>Frozen fish: Panla, Shawa and Titus</h3>
+        <p>Three favourites for homes, restaurants and retailers, packed in cartons and kept properly stored. Ask for today's stock and carton prices.</p>
         <div class="btn-row"><a class="btn btn-wa btn-sm" href="{wa("Hello NAQI FARM ENTERPRISE, which frozen fish cartons do you have today, and at what price?")}" target="_blank" rel="noopener" data-track="frozen-fish">{I["wa"]} Ask about fish</a></div>
       </div>
     </article>
     <article class="card product-card reveal">
-      <div class="product-media chicken">{ART_CHICKEN}</div>
+      <div class="product-media chicken"><img src="assets/img/products/chicken-carton.jpg" alt="A frozen carton of chicken in cold storage" width="960" height="600" loading="lazy"></div>
       <div class="product-body">
         <span class="tag">Cartons</span>
         <h3>Frozen chicken</h3>
@@ -684,6 +685,16 @@ frozen = f'''
 </div></section>
 
 <section class="section section-alt"><div class="container">
+  <div class="section-head center"><span class="eyebrow">From our cold room</span><h2>Packed in cartons, kept frozen</h2>
+  <p class="lead">Panla, Shawa, Titus and chicken, stored the way they should be until they leave our depot.</p></div>
+  <div class="depot-gallery">
+    <figure class="reveal"><img src="assets/img/products/panla-fish-tall.jpg" alt="Frozen Panla fish in a tray" width="900" height="1200" loading="lazy"><figcaption>Panla</figcaption></figure>
+    <figure class="reveal"><img src="assets/img/products/fish-carton-tall.jpg" alt="Frozen fish packed in a lined carton" width="900" height="1200" loading="lazy"><figcaption>Fish, packed in lined cartons</figcaption></figure>
+    <figure class="reveal"><img src="assets/img/products/chicken-carton-tall.jpg" alt="A frozen carton of chicken in cold storage" width="900" height="1200" loading="lazy"><figcaption>Chicken, by the carton</figcaption></figure>
+  </div>
+</div></section>
+
+<section class="section"><div class="container">
   <div class="section-head center"><span class="eyebrow">The NAQI standard</span><h2>The same honest thinking, applied to frozen food</h2></div>
   <div class="grid grid-3">
     <div class="card reveal"><div class="icon-badge ice">{I["snow"]}</div><h3>Properly stored</h3><p>Kept frozen the way it should be, from our depot until it leaves.</p></div>
@@ -692,7 +703,7 @@ frozen = f'''
   </div>
 </div></section>
 
-<section class="section"><div class="container">
+<section class="section section-alt"><div class="container">
   <div class="section-head"><span class="eyebrow">Frozen food FAQs</span><h2>Good to know</h2></div>
   {frozen_faq_html}
 </div></section>
@@ -701,8 +712,8 @@ frozen = f'''
 '''
 page(
     "frozen-foods.html",
-    "Frozen Fish & Chicken by the Carton in Lagos | NAQI FARM ENTERPRISE",
-    "Buy frozen fish and chicken by the carton in Mushin, Lagos. A variety of types, properly stored, for restaurants, hotels, supermarkets, traders and families. Delivery on request.",
+    "Frozen Panla, Shawa, Titus & Chicken by the Carton, Lagos | NAQI FARM",
+    "Buy frozen Panla, Shawa and Titus fish and chicken by the carton in Mushin, Lagos. Properly stored, for restaurants, hotels, supermarkets, traders and families. Delivery on request.",
     frozen,
     extra_schema=[frozen_faq_schema],
     crumbs=frozen_crumbs,

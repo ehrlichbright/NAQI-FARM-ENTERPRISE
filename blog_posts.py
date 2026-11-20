@@ -168,7 +168,7 @@ POSTS = [
 </ul>
 
 <h2>Where can you buy properly stored frozen fish and chicken in Lagos?</h2>
-<p>Good storage starts before you buy. At NAQI FARM ENTERPRISE our fish and chicken come in a variety of types, packed in cartons and kept properly stored at our depot in Mushin, so they reach your kitchen or shop the way they should. You can collect with your own transport, or ask us to arrange delivery, which is charged separately.</p>
+<p>Good storage starts before you buy. At NAQI FARM ENTERPRISE our Panla, Shawa and Titus fish and our chicken are packed in cartons and kept properly stored at our depot in Mushin, so they reach your kitchen or shop the way they should. You can collect with your own transport, or ask us to arrange delivery, which is charged separately.</p>
 <p>See <a href="frozen-foods.html">our frozen fish and chicken</a> or message us on WhatsApp for today's stock.</p>
 """,
         "faq": [
