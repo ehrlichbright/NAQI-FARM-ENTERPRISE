@@ -317,6 +317,8 @@ p { margin: 0 0 1em; }
 @media (min-width: 720px) { .depot-gallery { grid-template-columns: repeat(3, 1fr); } }
 .depot-gallery figure { margin: 0; border-radius: var(--radius); overflow: hidden; background: var(--white); border: 1px solid var(--line); box-shadow: var(--shadow); }
 .depot-gallery img { width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; }
+@media (min-width: 720px) { .depot-gallery-wide { grid-template-columns: repeat(2, 1fr); } }
+.depot-gallery-wide img { aspect-ratio: 4 / 3; }
 .depot-gallery figcaption { padding: 10px 12px; font-size: 0.88rem; color: var(--muted); }
 
 .check-list { list-style: none; padding: 0; margin: 0 0 1em; display: grid; gap: 10px; }

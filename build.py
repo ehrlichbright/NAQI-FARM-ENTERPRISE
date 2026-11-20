@@ -77,9 +77,11 @@ DEPOT = {
     "tank_front": ("assets/img/depot/oil-tank-front.jpg", "NAQI FARM's Olein oil storage tank at the Mushin depot"),
     "tank_meter": ("assets/img/depot/oil-tank-and-meter.jpg", "The depot oil tank beside the pump and litre meter"),
     "tank_close": ("assets/img/depot/oil-tank-closeup.jpg", "Close-up of the oil storage tank and its access hatch"),
-    "meter": ("assets/img/depot/litre-meter-and-pump.jpg", "The litre meter and pump that fill customers' containers"),
+    "meter": ("assets/img/depot/litre-meter-closeup.jpg", "The litre meter and pump that fill customers' containers"),
     "filling": ("assets/img/depot/filling-point.jpg", "The filling point, with the meter and delivery hose"),
-    "meter_card": ("assets/img/depot/litre-meter-card.jpg", "Litre meter used to measure every fill at the depot"),
+    "meter_card": ("assets/img/depot/litre-meter-card-2.jpg", "Litre meter used to measure every fill at the depot"),
+    "setup": ("assets/img/depot/oil-setup-tank-meter-keg.jpg", "The depot oil tank, pump and litre meter filling a yellow keg"),
+    "keg_meter": ("assets/img/depot/oil-filling-keg-at-meter.jpg", "Olein oil flowing from the metered nozzle into a yellow keg"),
     "keg": ("assets/img/depot/filling-a-keg.jpg", "A customer's yellow keg being filled through the litre meter"),
 }
 
@@ -536,11 +538,10 @@ OIL_FAQ = [
 oil_faq_html, oil_faq_schema = faq_block(OIL_FAQ)
 oil_crumbs = [("index.html", "Home"), ("vegetable-oil.html", "Original Olein Oil")]
 gallery = "".join(
-    f'<figure class="reveal">{photo(k)}<figcaption>{cap}</figcaption></figure>'
+    f'<figure class="reveal">{photo(k, w=1200, h=900)}<figcaption>{cap}</figcaption></figure>'
     for k, cap in [
-        ("tank_front", "Our storage tank, filled by tanker from the manufacturer"),
-        ("meter", "The litre meter: every fill is measured here"),
-        ("filling", "The filling point, where your container is filled"),
+        ("setup", "From tank to meter to your keg: no middlemen, no repackaging"),
+        ("keg_meter", "Every litre goes through the meter before it reaches your container"),
     ]
 )
 oil = f'''
@@ -574,8 +575,8 @@ oil = f'''
 
 <section class="section section-alt"><div class="container">
   <div class="section-head center"><span class="eyebrow">Inside our depot</span><h2>See where your oil comes from</h2>
-  <p class="lead">Real photos from our depot at {ADDRESS}. Come and see it for yourself.</p></div>
-  <div class="depot-gallery">{gallery}</div>
+  <p class="lead">How your oil gets from our tank into your container, at {ADDRESS}. Come and see it for yourself.</p></div>
+  <div class="depot-gallery depot-gallery-wide">{gallery}</div>
 </div></section>
 
 <section class="section"><div class="container">
@@ -623,7 +624,7 @@ page(
         "@type": "Product",
         "name": "Original Olein oil (Kings oil), sold by the litre",
         "description": "Original, unadulterated Olein refined vegetable oil delivered by tanker from the manufacturer and metered into the customer's own container.",
-        "image": [SITE + "/assets/img/depot/oil-tank-front.jpg", SITE + "/assets/img/depot/litre-meter-and-pump.jpg"],
+        "image": [SITE + "/assets/img/depot/oil-setup-tank-meter-keg.jpg", SITE + "/assets/img/depot/oil-filling-keg-at-meter.jpg"],
         "category": "Vegetable oil",
         "brand": {"@type": "Brand", "name": "Kings"},
         "offers": {
