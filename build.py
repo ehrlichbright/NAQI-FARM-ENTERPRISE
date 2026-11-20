@@ -665,7 +665,7 @@ frozen = f'''
 <section class="section"><div class="container">
   <div class="grid grid-2">
     <article class="card product-card reveal">
-      <div class="product-media fish"><img src="assets/img/products/fish-carton.jpg" alt="Frozen fish packed in a lined carton" width="960" height="600" loading="lazy"></div>
+      <div class="product-media fish"><img src="assets/img/products/fish-carton.jpg" alt="Frozen Shawa fish packed in a lined carton" width="960" height="600" loading="lazy"></div>
       <div class="product-body">
         <span class="tag">Cartons</span>
         <h3>Frozen fish: Panla, Shawa and Titus</h3>
@@ -689,9 +689,9 @@ frozen = f'''
   <div class="section-head center"><span class="eyebrow">From our cold room</span><h2>Packed in cartons, kept frozen</h2>
   <p class="lead">Panla, Shawa, Titus and chicken, stored the way they should be until they leave our depot.</p></div>
   <div class="depot-gallery">
-    <figure class="reveal"><img src="assets/img/products/panla-fish-tall.jpg" alt="Frozen Panla fish in a tray" width="900" height="1200" loading="lazy"><figcaption>Panla</figcaption></figure>
-    <figure class="reveal"><img src="assets/img/products/fish-carton-tall.jpg" alt="Frozen fish packed in a lined carton" width="900" height="1200" loading="lazy"><figcaption>Fish, packed in lined cartons</figcaption></figure>
-    <figure class="reveal"><img src="assets/img/products/chicken-carton-tall.jpg" alt="A frozen carton of chicken in cold storage" width="900" height="1200" loading="lazy"><figcaption>Chicken, by the carton</figcaption></figure>
+    <figure class="reveal"><img src="assets/img/products/panla-fish-tall.jpg" alt="Frozen Panla fish in a tray" width="900" height="1200" loading="lazy"><figcaption>Panla Fish (KG)</figcaption></figure>
+    <figure class="reveal"><img src="assets/img/products/fish-carton-tall.jpg" alt="Frozen Shawa fish packed in a lined carton" width="900" height="1200" loading="lazy"><figcaption>Shawa Fish (KG)</figcaption></figure>
+    <figure class="reveal"><img src="assets/img/products/chicken-carton-tall.jpg" alt="A frozen carton of chicken in cold storage" width="900" height="1200" loading="lazy"><figcaption>Chicken (KG)</figcaption></figure>
   </div>
 </div></section>
 
