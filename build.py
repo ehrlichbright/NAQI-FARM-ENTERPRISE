@@ -298,6 +298,24 @@ def cta_band(heading="Ready to stop paying for packaging?", text="Send us your c
 </div></div></section>'''
 
 
+def image_hero(img, alt, w, h, mobile_pos, crumbs, title, lead, ctas, extra_class=""):
+    """Inner-page hero: photo fills the banner, copy sits on its light side (same style as the homepage)."""
+    return f'''<section class="hero hero-image page-hero-image {extra_class}" style="--hero-pos-mobile:{mobile_pos}">
+  <picture class="hero-bg">
+    <source srcset="assets/img/{img}.webp" type="image/webp">
+    <img src="assets/img/{img}.jpg" alt="{alt}" width="{w}" height="{h}" fetchpriority="high">
+  </picture>
+  <div class="container">
+    <div class="hero-copy">
+      {breadcrumb_html(crumbs)}
+      <h1>{title}</h1>
+      <p class="lead">{lead}</p>
+      <div class="btn-row hero-ctas">{ctas}</div>
+    </div>
+  </div>
+</section>'''
+
+
 def nice_date(iso):
     d = datetime.date.fromisoformat(iso)
     return f"{d.day} {d.strftime('%B %Y')}"
@@ -544,16 +562,16 @@ gallery = "".join(
         ("keg_meter", "Every litre goes through the meter before it reaches your container"),
     ]
 )
+OIL_HERO = image_hero(
+    "hero-oil-depot", "Olein oil flowing from the depot tank, through the pump and litre meter, into a yellow keg", 1672, 941, "68% bottom", oil_crumbs,
+    "Original Olein oil by the litre in Lagos. <em>Pure, unadulterated, metered in front of you.</em>",
+    f"Straight from the manufacturer, never mixed or diluted. Bring your own drum, keg or container (from {MIN_LITRES} litres) and pay for the oil, not the bottle, the label or the packaging.",
+    f'<a class="btn btn-wa" href="{WA_OIL}" target="_blank" rel="noopener" data-track="oil-hero">{I["wa"]} Get today&#39;s price per litre</a>'
+    f'<a class="btn btn-soft" href="tel:{PHONE_TEL}" data-track="oil-hero">{I["phone"]} Call to order</a>',
+    extra_class="hero-photo-right",
+)
 oil = f'''
-<section class="page-hero"><div class="container">
-  {breadcrumb_html(oil_crumbs)}
-  <h1>Original Olein oil, pure and unadulterated, by the litre in Lagos</h1>
-  <p class="lead">Straight from the manufacturer, never mixed or diluted. Bring your own drum, keg or container (from {MIN_LITRES} litres), we fill it through our meter in front of you, and you pay for the oil, not the bottle, the label or the packaging.</p>
-  <div class="btn-row" style="margin-top:24px">
-    <a class="btn btn-wa" href="{WA_OIL}" target="_blank" rel="noopener" data-track="oil-hero">{I["wa"]} Get today's price per litre</a>
-    <a class="btn btn-light" href="tel:{PHONE_TEL}" data-track="oil-hero">{I["phone"]} Call to order</a>
-  </div>
-</div></section>
+{OIL_HERO}
 
 <section class="section"><div class="container split">
   <div class="reveal">
@@ -651,16 +669,15 @@ FROZEN_FAQ = [
 ]
 frozen_faq_html, frozen_faq_schema = faq_block(FROZEN_FAQ)
 frozen_crumbs = [("index.html", "Home"), ("frozen-foods.html", "Frozen Foods")]
+FROZEN_HERO = image_hero(
+    "hero-frozen-fish", "Frozen Shawa fish packed in a lined carton on ice", 1800, 771, "80% center", frozen_crumbs,
+    "Frozen fish and chicken by the carton in Lagos. <em>Panla, Shawa, Titus and chicken.</em>",
+    "Packed in cartons and kept properly stored, so it reaches your shop or kitchen the way it should.",
+    f'<a class="btn btn-wa" href="{WA_FROZEN}" target="_blank" rel="noopener" data-track="frozen-hero">{I["wa"]} See what&#39;s in stock today</a>'
+    f'<a class="btn btn-soft" href="tel:{PHONE_TEL}" data-track="frozen-hero">{I["phone"]} Call to order</a>',
+)
 frozen = f'''
-<section class="page-hero"><div class="container">
-  {breadcrumb_html(frozen_crumbs)}
-  <h1>Frozen fish and chicken by the carton in Lagos</h1>
-  <p class="lead">Panla, Shawa and Titus fish, and chicken, packed in cartons and kept properly stored, so it reaches your shop or kitchen the way it should.</p>
-  <div class="btn-row" style="margin-top:24px">
-    <a class="btn btn-wa" href="{WA_FROZEN}" target="_blank" rel="noopener" data-track="frozen-hero">{I["wa"]} See what's in stock today</a>
-    <a class="btn btn-light" href="tel:{PHONE_TEL}" data-track="frozen-hero">{I["phone"]} Call to order</a>
-  </div>
-</div></section>
+{FROZEN_HERO}
 
 <section class="section"><div class="container">
   <div class="grid grid-2">
@@ -743,11 +760,18 @@ team_cards = "".join(
 )
 about_crumbs = [("index.html", "Home"), ("about.html", "About Us")]
 about = f'''
-<section class="page-hero"><div class="container">
-  {breadcrumb_html(about_crumbs)}
-  <h1>Quality food shouldn't be a luxury.</h1>
-  <p class="lead">And honest measurement shouldn't be a favour. That's how we do business, one litre and one carton at a time.</p>
-</div></section>
+<section class="page-hero photo-hero">
+  <picture class="hero-bg">
+    <source srcset="assets/img/hero-about-depot.webp" type="image/webp">
+    <img src="assets/img/hero-about-depot.jpg" alt="The NAQI FARM ENTERPRISE depot premises at 104 Ishaga Road, Idi-Araba, Mushin, Lagos" width="1600" height="1200" fetchpriority="high">
+  </picture>
+  <div class="container">
+    {breadcrumb_html(about_crumbs)}
+    <h1>Quality food shouldn't be a luxury.</h1>
+    <p class="lead">And honest measurement shouldn't be a favour. That's how we do business, one litre and one carton at a time.</p>
+    <p class="photo-hero-caption">{I["pin"]} Our depot: {ADDRESS}</p>
+  </div>
+</section>
 
 <section class="section"><div class="container split" style="align-items:start">
   <div class="story reveal">
@@ -761,7 +785,7 @@ about = f'''
     <p>Quality food shouldn't be a luxury, and honest measurement shouldn't be a favour. That's how we do business, one litre and one carton at a time.</p>
     <p class="signature">NAQI FARM ENTERPRISE<br><span style="font-size:1rem;color:var(--muted)">Straight from the source. Measured in front of you.</span></p>
   </div>
-  <div class="reveal" style="position:sticky;top:96px">
+  <div class="reveal">
     <div class="facts" style="grid-template-columns:1fr 1fr">
       <div class="fact"><strong>13 May 2023</strong><span>Year started</span></div>
       <div class="fact"><strong>{CAC}</strong><span>CAC registration no.</span></div>
